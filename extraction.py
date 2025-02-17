@@ -1,8 +1,10 @@
 import requests
 import json
 
-url_historical = f'https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=2000'
-url_fear = "https://api.alternative.me/fng/?limit=2000"
+limit = 2000
+
+url_historical = f'https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit={limit}'
+url_fear = f"https://api.alternative.me/fng/?limit={limit}"
 
 
 historical = requests.get(url_historical).json()
