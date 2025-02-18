@@ -11,8 +11,8 @@ historical = requests.get(url_historical).json()
 
 fear = requests.get(url_fear).json()
 
-with open("historical.json", "w") as outfile:
+with open("../data/processed/historical.json", "w") as outfile:
     json.dump(historical['Data']['Data'], outfile)
 
-with open("fear.json", "w") as outfile:
+with open("../data/processed/fear.json", "w") as outfile:
     json.dump(fear['data'], outfile)
